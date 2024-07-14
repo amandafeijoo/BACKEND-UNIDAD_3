@@ -1,4 +1,5 @@
-from django.urls import path
+from django.urls import path 
+
 from .views import (
     ArtistListCreate, ArtistRetrieveUpdateDestroy, ArtistByGenreList,
     AlbumListCreate, AlbumRetrieveUpdateDestroy, AlbumByArtistList, PopularArtistsList, PopularAlbumsList, latest_album_by_artist
