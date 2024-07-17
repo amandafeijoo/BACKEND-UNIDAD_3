@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout del repositorio
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Autenticarse en el registry
         if: github.ref_type == 'tag'
-        uses: docker/login-action@v2
+        uses: docker/login-action@v1
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -17,7 +17,7 @@ jobs:
        
       - name: Construir imagen
         if: github.ref_type == 'tag'
-        uses: docker/build-push-action@v4
+        uses: docker/build-push-action@v2
         with:
           context: .
           push: true
