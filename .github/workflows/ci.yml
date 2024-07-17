@@ -26,4 +26,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/amandafeijoo/BACKEND-UNIDAD_3/backend:${{ github.ref_name }}
+          tags: ghcr.io/amandafeijoo/backend-unidad_3/backend:${{ github.ref_name }}
